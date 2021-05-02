@@ -27,6 +27,16 @@ The commands I currently support are:
 ✨ /resume - __Resume Voice Chat Music.__
 ✨ /skip - __Skips the current Music Playing In Voice Chat.__
 ✨ /stop - __Clears The Queue as well as ends Voice Chat Music.__
+
+**Admins only**
+✨/player - __open music player settings panel__
+✨/pause - __pause song play__
+✨/resume - __resume song play__
+✨/skip - __play next song__
+✨/end - __stop music play__
+✨/userbotjoin - __invite assistant to your chat__
+✨/userbotleave -__ remove assistant from your chat__
+✨/admincache - __Refresh admin list__
         """,
         reply_markup=InlineKeyboardMarkup(
             [
