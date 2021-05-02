@@ -1,109 +1,45 @@
-from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+import os
+
+import youtube_dl
+from youtube_search import YoutubeSearch
+import requests
+
+from helpers.filters import command, other_filters2
+from helpers.decorators import errors
+
+from pyrogram import Client
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Voice
+
+from config import BOT_NAME as bn
 
 
-
-@Client.on_message(
-    filters.command("start")
-    & filters.private
-    & ~ filters.edited
-)
-async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAIp9mBtwBBZGywWEmV-WC8gcMArjusuAAKMAgACTp1xV6m-mtC1YTfoHgQ")
+@Client.on_message(command("start") & other_filters2)
+async def start(_, message: Message):
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name}!
-\nI can play music in your group's voice chat
-Maintained by @RYAN_HERE 
-\nTo add in your group contact us at @COLONY_OF_WEIRDOS_2.
-\nHit /help list of available commands.
- </b>""",
-      
-       
+        f"""I am **{bn}** !!
+I let you play music in your group's voice chat 😉
+The commands I currently support are:
+✨ /play - __Plays the replied audio file or YouTube video through link.__
+✨ /dplay - __play song you requested via deezer.__
+✨ /splay - __play song you requested via jio saavn.__
+✨ /song - __Uploads the searched song in the chat.__
+✨ /pause - __Pause Voice Chat Music.__
+✨ /resume - __Resume Voice Chat Music.__
+✨ /skip - __Skips the current Music Playing In Voice Chat.__
+✨ /stop - __Clears The Queue as well as ends Voice Chat Music.__
+        """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌍 Music group", url="https://t.me/COLONY_OF_WEIRDOS_2",
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/COLONY_OF_WEIRDOS_2"
+                        "Group 💬", url="https://t.me/COLONY_OF_WEIRDOS_2"
                     ),
                     InlineKeyboardButton(
-                        "💾 Source code", url="https://github.com/QueenArzoo/VCPlayBot"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/@Venommusic_botBot?startgroup=true"
-                    ) 
-                ]
-            ]
-        )
-    )
-
-@Client.on_message(
-    filters.command("start")
-    & filters.group
-    & ~ filters.edited
-)
-async def start(client: Client, message: Message):
-    await message.reply_text(
-        "💁🏻‍♂️ Do you want to search for a YouTube video?",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🔊 Channel", url="ㅤ"
-                    )
-                ],    
-                [    
-                    InlineKeyboardButton(
-                        "✅ Yes", switch_inline_query_current_chat=""
-                    ),
-                    InlineKeyboardButton(
-                        "No ❌", callback_data="close"
+                        "Channel 📣", url="https://t.me/COLONY_OF_WEIRDOS_2"
                     )
                 ]
             ]
         )
     )
 
-@Client.on_message(
-    filters.command("help")
-    & filters.private
-    & ~ filters.edited
-)
-async def help(client: Client, message: Message):
-    await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name}!
-\n/play <song name> - play song you requested
-/dplay <song name> - play song you requested via deezer
-/splay <song name> - play song you requested via jio saavn
-/playlist - Show now playing list
-/current - Show now playing
-/song <song name> - download songs you want quickly
-/search <query> - search videos on youtube with details
-/deezer <song name> - download songs you want quickly via deezer
-/saavn <song name> - download songs you want quickly via saavn
-/video <song name> - download videos you want quickly
-\n*Admins only*
-/player - open music player settings panel
-/pause - pause song play
-/resume - resume song play
-/skip - play next song
-/end - stop music play
-/userbotjoin - invite assistant to your chat
-/admincache - Refresh admin list
- </b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🔊 Channel", url="ㅤ"
-                    )
-                ]
-            ]
-        )
-    )    
+
