@@ -18,6 +18,9 @@ async def start(_, message: Message):
     await message.reply_text(
         f"""I am **{bn}** !!
 I let you play music in your group's voice chat 😉
+
+Maintained by:- **@VenomXowner**
+
 The commands I currently support are:
 ✨ /play - __Plays the replied audio file or YouTube video through link.__
 ✨ /dplay - __play song you requested via deezer.__
@@ -49,6 +52,9 @@ The commands I currently support are:
                     ),
                     InlineKeyboardButton(
                         "Assistant 🍻", url="https://t.me/VENOM_VC"
+                    ),
+                    InlineKeyboardButton(
+                        "Owner 👑", url="https://t.me/VenomXowner"
                     )
                 ]
             ]
