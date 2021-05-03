@@ -46,6 +46,9 @@ The commands I currently support are:
                     ),
                     InlineKeyboardButton(
                         "Channel 📣", url="https://t.me/COLONY_OF_WEIRDOS_2"
+                    ),
+                    InlineKeyboardButton(
+                        "Assistant 🍻", url="https://t.me/VENOM_VC"
                     )
                 ]
             ]
