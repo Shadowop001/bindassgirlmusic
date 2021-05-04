@@ -45,20 +45,24 @@ The commands I currently support are:
             [
                 [
                     InlineKeyboardButton(
-                        "Group 💬", url="https://t.me/COLONY_OF_WEIRDOS_2"
+                        "🥀 Channel", url="https://github.com/edguru/devilsmusic"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "💬 Group", url="https://t.me/devilcodes_network"
                     ),
                     InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/COLONY_OF_WEIRDOS_2"
+                        "🍻 Assistant", url="https://t.me/VENOM_VC"
                     ),
                     InlineKeyboardButton(
-                        "Assistant 🍻", url="https://t.me/VENOM_VC"
-                    ),
+                        "👑 Owner", url="https://t.me/VenomXowner" )
+                ],
+                [
                     InlineKeyboardButton(
-                        "Owner 👑", url="https://t.me/VenomXowner"
+                        "✨ Add to your group", url="t.me/{}?startgroup=true"
                     )
                 ]
             ]
         )
     )
-
-
