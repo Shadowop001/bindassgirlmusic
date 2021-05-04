@@ -45,12 +45,12 @@ The commands I currently support are:
             [
                 [
                     InlineKeyboardButton(
-                        "🥀 Channel", url="https://github.com/edguru/devilsmusic"
+                        "🥀 Support Group", url="https://t.me/COLONY_OF_WEIRDOS_2"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/devilcodes_network"
+                        "✨ Channel", url="https://t.me/VenomXbots"
                     ),
                     InlineKeyboardButton(
                         "🍻 Assistant", url="https://t.me/VENOM_VC"
@@ -60,8 +60,10 @@ The commands I currently support are:
                 ],
                 [
                     InlineKeyboardButton(
-                        "✨ Add to your group", url="t.me/{}?startgroup=true"
-                    )
+                        text="✨ Add me to your group",
+                        url="t.me/{}?startgroup=true".format(
+                             context.bot.username
+                                )
                 ]
             ]
         )
