@@ -62,7 +62,9 @@ The commands I currently support are:
                     InlineKeyboardButton(
                         text="✨ Add me to your group",
                         url="t.me/{}?startgroup=true".format(
-                             context.bot.username
-                                )]
-        )
-    )
+                             context.bot.username,
+                            ),
+                        ],
+                    ]
+                ),
+            )
