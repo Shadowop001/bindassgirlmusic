@@ -63,8 +63,6 @@ The commands I currently support are:
                         text="✨ Add me to your group",
                         url="t.me/{}?startgroup=true".format(
                              context.bot.username
-                                )
-                ]
-            ]
+                                )]
         )
     )
