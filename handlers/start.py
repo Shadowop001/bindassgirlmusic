@@ -17,10 +17,21 @@ from config import BOT_NAME as bn
 async def start(_, message: Message):
     await message.reply_text(
         f"""I am **{bn}** !!
-I let you play music in your group's voice chat 😉
+I let you play music in your group's voice chat ✨🥀. 
 
 Maintained by:- **@VenomXowner**
 
+\nHit /help list of available commands.
+ </b>""",
+
+@Client.on_message(
+    filters.command("help")
+    & filters.private
+    & ~ filters.edited
+)
+async def help(client: Client, message: Message):
+    await message.reply_text(
+        f"""<b>Hi {message.from_user.first_name}!
 The commands I currently support are:
 ✨ /play - __Plays the replied audio file or YouTube video through link.__
 ✨ /dplay - __play song you requested via deezer.__
@@ -40,6 +51,7 @@ The commands I currently support are:
 ✨/userbotjoin - __invite assistant to your chat__
 ✨/userbotleave -__ remove assistant from your chat__
 ✨/admincache - __Refresh admin list__
+ 
         """,
         reply_markup=InlineKeyboardMarkup(
             [
