@@ -51,8 +51,7 @@ The commands I currently support are:
 ✨/userbotjoin - __invite assistant to your chat__
 ✨/userbotleave -__ remove assistant from your chat__
 ✨/admincache - __Refresh admin list__
- 
-        """,
+ </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
