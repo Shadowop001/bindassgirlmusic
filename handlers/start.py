@@ -14,33 +14,30 @@ from config import BOT_NAME as {bn}
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""I am **{bn}** !!
-I let you play music in your group's voice chat ✨🥀
-
-Maintained by:- **@VenomXowner**
+        𝙸 𝚊𝚖 **{bn}** !! 𝙸 𝚕𝚎𝚝 𝚢𝚘𝚞 𝚙𝚕𝚊𝚢 𝚖𝚞𝚜𝚒𝚌 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙'𝚜 𝚟𝚘𝚒𝚌𝚎 𝚌𝚑𝚊𝚝 ✨🥀 𝙼𝚊𝚒𝚗𝚝𝚊𝚒𝚗𝚎𝚍 𝚋𝚢:- **@VenomXowner**
   </b>""",
 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🥀 Support chat", url="https://t.me/COLONY_OF_WEIRDOS_2",
+                        "🥀 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐜𝐡𝐚𝐭", url="https://t.me/COLONY_OF_WEIRDOS_2",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "👑 Owner", url="https://t.me/VenomXowner"
+                        "👑 𝐎𝐰𝐧𝐞𝐫", url="https://t.me/VenomXowner"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/VenomXbots"
+                        "🔊 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/VenomXbots"
                     ),
                     InlineKeyboardButton(
-                        "🍻 Assistant", url="https://t.me/VENOM_VC"
+                        "🍻 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭", url="https://t.me/VENOM_VC"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/VenomXmusicbot?startgroup=true"
+                        "💫 𝐀𝐝𝐝 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 💫", url="https://t.me/VenomXmusicbot?startgroup=true"
                     ) 
                 ]
             ]
