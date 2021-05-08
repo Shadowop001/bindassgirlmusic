@@ -18,7 +18,8 @@ async def start(_, message: Message):
 I let you play music in your group's voice chat ✨🥀
 
 Maintained by:- **@VenomXowner**
-     """,
+  </b>""",
+
         reply_markup=InlineKeyboardMarkup(
             [
                 [
