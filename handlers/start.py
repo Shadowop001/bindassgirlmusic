@@ -20,27 +20,7 @@ async def start(_, message: Message):
 I let you play music in your group's voice chat 😉
 
 Maintained by:- **@VenomXowner**
-
-The commands I currently support are:
-✨ /play - __Plays the replied audio file or YouTube video through link.__
-✨ /dplay - __play song you requested via deezer.__
-✨ /splay - __play song you requested via jio saavn.__
-✨ /song - __Uploads the searched song in the chat.__
-✨ /pause - __Pause Voice Chat Music.__
-✨ /resume - __Resume Voice Chat Music.__
-✨ /skip - __Skips the current Music Playing In Voice Chat.__
-✨ /stop - __Clears The Queue as well as ends Voice Chat Music.__
-
-**Admins only**
-✨/player - __open music player settings panel__
-✨/pause - __pause song play__
-✨/resume - __resume song play__
-✨/skip - __play next song__
-✨/end - __stop music play__
-✨/userbotjoin - __invite assistant to your chat__
-✨/userbotleave -__ remove assistant from your chat__
-✨/admincache - __Refresh admin list__
-        """,
+     """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
