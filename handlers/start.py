@@ -1,25 +1,18 @@
-import os
-
-import youtube_dl
-from youtube_search import YoutubeSearch
-import requests
-
-from helpers.filters import command, other_filters2
-from helpers.decorators import errors
-
-from pyrogram import Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Voice
-
-from config import BOT_NAME as bn
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@Client.on_message(command("start") & other_filters2)
-async def start(_, message: Message):
+
+@Client.on_message(
+    filters.command("start")
+    & filters.private
+    & ~ filters.edited
+)
+async def start_(client: Client, message: Message):
+    await message.reply_sticker("https://telegra.ph/file/f474ba584530f5786a489.mp4")
     await message.reply_text(
         f"""I am **{bn}** !!
-I let you play music in your group's voice chat 😉
-
-SAITAMA_IMG = "https://telegra.ph/file/f474ba584530f5786a489.mp4"
+I let you play music in your group's voice chat ✨🥀
 
 Maintained by:- **@VenomXowner**
      """,
