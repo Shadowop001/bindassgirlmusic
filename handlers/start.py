@@ -19,6 +19,8 @@ async def start(_, message: Message):
         f"""I am **{bn}** !!
 I let you play music in your group's voice chat 😉
 
+SAITAMA_IMG = "https://telegra.ph/file/f474ba584530f5786a489.mp4"
+
 Maintained by:- **@VenomXowner**
      """,
         reply_markup=InlineKeyboardMarkup(
