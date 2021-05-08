@@ -8,7 +8,7 @@ from helpers.decorators import errors
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Voice
 
-from config import BOT_NAME as bn
+from config import BOT_NAME as {bn}
 
 
 @Client.on_message(command("start") & other_filters2)
