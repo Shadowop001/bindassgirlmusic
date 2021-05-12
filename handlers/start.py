@@ -22,12 +22,12 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🥀 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐜𝐡𝐚𝐭" url="https://t.me/COLONY_OF_WEIRDOS_2",
+                        "🥀 Support group", url="https://t.me/VenomXowner"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "👑 𝐎𝐰𝐧𝐞𝐫", url="https://t.me/VenomXowner"
+                        "👑 Owner", url="https://t.me/VenomXowner"
                     ),
                     InlineKeyboardButton(
                         "🔊 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/VenomXbots"
